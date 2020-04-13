@@ -5,6 +5,7 @@ import TranslateExample from "./components/TranslateExample";
 import RoundedSquares from "./components/RoundedSquares";
 import Cross from "./components/Cross";
 import Dots from "./components/Dots";
+import Flower from "./components/Flower";
 
 function App() {
   return (
@@ -35,17 +36,23 @@ function App() {
       </Typing>
       <main>
         <TranslateExample title="Cross">
-          <Cross colors={["rgba(255,255,255,1)", "rgba(255,255,255,0.75)", "rgba(255,255,255,0.5)", "rgba(255,255,255,0.25)"]} />
+          <Cross
+            colors={[
+              "rgba(255,255,255,0.5)",
+              "rgba(255,255,255,0.25)",
+              "rgba(255,255,255,1)",
+              "rgba(255,255,255,0.75)",
+            ]}
+          />
         </TranslateExample>
         <TranslateExample title="Dots">
           <Dots />
         </TranslateExample>
         <TranslateExample title="Flower">
+          <Flower />
         </TranslateExample>
-        <TranslateExample title="Web">
-        </TranslateExample>
-        <TranslateExample title="Keyboard">
-        </TranslateExample>
+        <TranslateExample title="Web"></TranslateExample>
+        <TranslateExample title="Keyboard"></TranslateExample>
       </main>
     </div>
   );
