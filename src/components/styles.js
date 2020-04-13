@@ -3,6 +3,13 @@ import styled, { keyframes, css } from "styled-components";
 export const DIV = styled.div`
   display: flex;
   flex-direction: column;
+  width: 15rem;
+  height: 15rem;
+`;
+
+export const Title = styled.h3`
+  cursor: pointer;
+  text-align: left;
 `;
 
 export const SquareHolder = styled.div`
