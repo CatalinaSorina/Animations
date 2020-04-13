@@ -6,6 +6,7 @@ import RoundedSquares from "./components/RoundedSquares";
 import Cross from "./components/Cross";
 import Dots from "./components/Dots";
 import Flower from "./components/Flower";
+import Web from "./components/Web";
 
 function App() {
   return (
@@ -51,7 +52,9 @@ function App() {
         <TranslateExample title="Flower">
           <Flower />
         </TranslateExample>
-        <TranslateExample title="Web"></TranslateExample>
+        <TranslateExample title="Web">
+          <Web />
+        </TranslateExample>
         <TranslateExample title="Keyboard"></TranslateExample>
       </main>
     </div>
