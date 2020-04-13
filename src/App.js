@@ -4,6 +4,7 @@ import Typing from "react-typing-animation";
 import TranslateExample from "./components/TranslateExample";
 import RoundedSquares from "./components/RoundedSquares";
 import Cross from "./components/Cross";
+import Dots from "./components/Dots";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Cross colors={["rgba(255,255,255,1)", "rgba(255,255,255,0.75)", "rgba(255,255,255,0.5)", "rgba(255,255,255,0.25)"]} />
         </TranslateExample>
         <TranslateExample title="Dots">
+          <Dots />
         </TranslateExample>
         <TranslateExample title="Flower">
         </TranslateExample>

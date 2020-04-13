@@ -6,11 +6,11 @@ const motion = ({ position }) => keyframes`
         grid-area: ${moveOn(position + 2)};
     }
     30% {
-        width:1rem;
-        height:1rem;
+        transform: scale(0.5);
         grid-area: ${moveOn(position + 3)};
     }
     60% {
+        transform: scale(0.75);
         grid-area: ${moveOn(position + 4)};
     }
     100% {
@@ -22,6 +22,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
+  align-items: center;
   margin: 1rem;
   padding: 0;
   width: 7rem;
@@ -34,11 +35,12 @@ const Line = styled.div`
   grid-area: ${({ position }) => moveOn(position + 1)};
   width: ${({ position }) => setLine(position + 1)};
   height: ${({ position }) => setLine(position + 2)};
+  justify-self:center;
   border-radius: 1rem;
   border:0.05rem solid white;
   background: ${({ color, colors, colorIndex }) => color? color:colors[selectFrom(colors,colorIndex)]};
   animation-name: ${motion};
-  animation-duration: 1.5s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 `;
 
