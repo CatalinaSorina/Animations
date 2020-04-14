@@ -8,13 +8,21 @@ import Dots from "./components/Dots";
 import Flower from "./components/Flower";
 import Web from "./components/Web";
 import Keyboard from "./components/Keyboard";
+import {
+  ConfettiHolder,
+  ConfettiButton,
+  configConfetti,
+} from "./components/styles";
+import { useState } from "react";
+import Confetti from "react-dom-confetti";
 
 function App() {
+  const [esc, setEsc] = useState(false);
+
   return (
     <div className="App">
       <Typing speed={100}>
         <h2>Animations</h2>
-        {/* <h3>Spinners</h3> */}
       </Typing>
       <main>
         <TranslateExample title="Skew">
@@ -33,9 +41,15 @@ function App() {
           <RoundedSquares animation="translate" />
         </TranslateExample>
       </main>
-      <Typing speed={200}>
-        <h3>Loaders</h3>
-      </Typing>
+      <ConfettiHolder>
+        <Typing speed={200}>
+          <h3>Loaders</h3>
+        </Typing>
+        <ConfettiButton onClick={() => (esc ? setEsc(false) : setEsc(true))}>
+          <Confetti active={esc} config={configConfetti} />
+          Esc
+        </ConfettiButton>
+      </ConfettiHolder>
       <main>
         <TranslateExample title="Cross">
           <Cross

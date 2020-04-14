@@ -120,3 +120,35 @@ const getAnimation = (name) => {
       return skew;
   }
 };
+
+export const ConfettiHolder = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+`;
+
+export const ConfettiButton = styled.button`
+  outline: none;
+  color: grey;
+  font-family: Cursive;
+  width: 4rem;
+  height: 1.5rem;
+  border-radius: 0.2rem;
+
+  &:active {
+    box-shadow: 0 0 0 rgba(42, 27, 24, 0.8);
+  }
+`;
+
+export const configConfetti = {
+  angle: "140",
+  spread: "80",
+  startVelocity: 280,
+  elementCount: 1000,
+  dragFriction: "0.29",
+  duration: "2800",
+  stagger: "5",
+  width: "0.5rem",
+  height: "0.7rem",
+  colors: ["#FF2D00", "#FFA200", "#FFFC43","#FF1C42", "#FBFF00","#B9FF00","#172830","#00FF64","#00ECFF","#008BFF"]
+};
