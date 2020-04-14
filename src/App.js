@@ -7,6 +7,7 @@ import Cross from "./components/Cross";
 import Dots from "./components/Dots";
 import Flower from "./components/Flower";
 import Web from "./components/Web";
+import Keyboard from "./components/Keyboard";
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
         </TranslateExample>
       </main>
       <Typing speed={200}>
-        <h3>Spinners</h3>
+        <h3>Loaders</h3>
       </Typing>
       <main>
         <TranslateExample title="Cross">
@@ -55,7 +56,9 @@ function App() {
         <TranslateExample title="Web">
           <Web />
         </TranslateExample>
-        <TranslateExample title="Keyboard"></TranslateExample>
+        <TranslateExample title="Keyboard">
+          <Keyboard />
+        </TranslateExample>
       </main>
     </div>
   );
